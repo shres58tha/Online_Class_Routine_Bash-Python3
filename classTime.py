@@ -27,13 +27,13 @@ from PIL import Image
 # defining classTime variables with the appropriate permalinks opening in the chromium app mode
 # same commannd as that to be used while using CLI to open link in app mode 
 # <Class_url> put each subjects class's meeting urls here
-micro = "echo microprocessor; chromium --app=<Class_url> 1>/dev/null 2>/dev/null &"
-MatRP = "echo math RP; chromium --app=<Class_url> 2>/dev/null &"
-elect = "echo electric technology; chromium --app=<Class_url> 2>/dev/null &"
-chem = "echo chemistry; chromium --app=<Class_url> 2>/dev/null &"
-MatNPA = "echo math NPA; chromium --app=<Class_url> 2>/dev/null &"
-OOP = "echo OOP; chromium --app=<Class_url> 2>/dev/null &"
-WS = "echo Workshop; chromium --app=<Class_url> 2>/dev/null &"
+micro = "echo microprocessor; chromium --app=<Class_url>  &>/dev/null &"
+MatRP = "echo math RP; chromium --app=<Class_url> &>/dev/null &"
+elect = "echo electric technology; chromium --app=<Class_url> &>/dev/null &"
+chem = "echo chemistry; chromium --app=<Class_url> &>/dev/null &"
+MatNPA = "echo math NPA; chromium --app=<Class_url> &>/dev/null &"
+OOP = "echo OOP; chromium --app=<Class_url> &>/dev/null &"
+WS = "echo Workshop; chromium --app=<Class_url> &>/dev/null &"
 NULL = "NULL"
 
 # Routine in list of tuple form
