@@ -13,7 +13,7 @@
 # basic OOP object concept is used here to organize.the routine and making the code
 # univesally extensible.. a vast improvemnt over the first iteration of equivalent
 # program
-# This program is highly compact and consise
+# This program is highly compact and concise
 
 import datetime
 import os
@@ -47,12 +47,12 @@ Thu = [(700,OOP)  ,(750,elect)    ,(930,NULL)   ]
 Fri = [(700,WS)   ,(750,MatNPA)   ,(930,NULL)   ]
 Sat = [(0,NULL)]
 
-
 dt = datetime.datetime.now() #get the current date and time in dt varible datetime object time
-print(dt)
+t_offset=5                                              # offset time
+dt_plus_5=dt + datetime.timedelta(minutes = t_offset)   # offset to login offset time piror
 
-HHMM=dt.hour*100 + dt.minute + 5                # 5 is the amount of time in min to login piror too actual start
-day_name = calendar.day_name[dt.weekday()] #gets date name from array in the calerder object using dt.weekday as index
+HHMM= (dt_plus_5.hour*100 + dt_plus_5.minute  )         # 5 is the amount of time in min to login piror too actual start
+day_name = calendar.day_name[dt.weekday()]              # gets day_name from array in calendar object using dt.weekday 
 
 if      (day_name == 'Sunday')      :  xyz=Sun  # these codes here for simplyfing the code below
 elif    (day_name == 'Monday')      :  xyz=Mon  # here we select the row of the routine or day of the routine
@@ -63,7 +63,9 @@ elif    (day_name == 'Friday')      :  xyz=Fri
 elif    (day_name == 'Saturday')    :  xyz=Sat
 else :  print ('This should never be printed')
 
-print (day_name, 'Class at time', HHMM-5)
+print (day_name, dt.strftime("%Y-%m-%d %H:%M"))
+print ('HHMM', HHMM)
+
 i=0                                                     # go through the list of day in routine to see
 while (xyz[i][1] != 'NULL'):                            # which class is currenty being active
     if ( HHMM >= (xyz[i][0]) and HHMM< xyz[i+1][0]) :   # the class if from start time of this class to start time of next one
