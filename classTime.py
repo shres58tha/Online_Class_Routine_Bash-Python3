@@ -27,13 +27,13 @@ from PIL import Image
 # defining classTime variables with the appropriate permalinks opening in the chromium app mode
 # same commannd as that to be used while using CLI to open link in app mode 
 # <Class_url> put each subjects class's meeting urls here
-micro = "echo microprocessor; chromium --app=<Class_url>  &>/dev/null &"
-MatRP = "echo math RP; chromium --app=<Class_url> &>/dev/null &"
-elect = "echo electric technology; chromium --app=<Class_url> &>/dev/null &"
-chem = "echo chemistry; chromium --app=<Class_url> &>/dev/null &"
-MatNPA = "echo math NPA; chromium --app=<Class_url> &>/dev/null &"
-OOP = "echo OOP; chromium --app=<Class_url> &>/dev/null &"
-WS = "echo Workshop; chromium --app=<Class_url> &>/dev/null &"
+micro = "echo microprocessor; nohup chromium --app=<Class_url>  >/dev/null 2>1& &"
+MatRP = "echo math RP; nohup chromium --app=<Class_url> &>/dev/null 2>1& &"
+elect = "echo electric technology; nohup chromium --app=<Class_url> &>/dev/null 2>1& &"
+chem = "echo chemistry; nohup chromium --app=<Class_url> &>/dev/null 2>1& &"
+MatNPA = "echo math NPA; nohup chromium --app=<Class_url> &>/dev/null 2>1& &"
+OOP = "echo OOP; nohup chromium --app=<Class_url> &>/dev/null 2>1& &"
+WS = "echo Workshop; nohup chromium --app=<Class_url> &>/dev/null 2>1& &"
 NULL = "NULL"
 
 # Routine in list of tuple form
@@ -70,8 +70,7 @@ i=0                                                     # go through the list of
 while (xyz[i][1] != 'NULL'):                            # which class is currenty being active
     if ( HHMM >= (xyz[i][0]) and HHMM< xyz[i+1][0]) :   # the class if from start time of this class to start time of next one
         #print (xyz[0])
-        #os.system(xyz[i][1])
-        subprocess.Popen ( (xyz[i][1]) , preexec_fn=os.setsid)
+        os.system(xyz[i][1])
                                                         # actual execution of the meeting in app mode in chrome/chromium
         time.sleep(5)                                   # may be needed for spawn to be detached
         exit(0)                                         # class launched hece task is done exit(0) to indicate sucess
