@@ -5,17 +5,6 @@ cls
 echo.
 echo Disclaimer warning :  I am not be responsible for damage this script.&echo may do if you monkey around it, and no ill intention is built in.&echo Any issue if happened will be support at my discretion.&echo Bug if present and any damage due it is out of my control.&echo umesh.acem@gmail.com&echo. &echo.
 
-echo "-ClassTimeTable-"
-echo "Sun|700|EM-MM   |840|Math-GDC|1020|Break |1250|Inst-LKC|1430|NULL"
-echo "Mon|700|CS-SKR  |840|PS-JG   |1020|NULL"
-echo "Tue|700|EM-MM   |840|Math-NPA|1020|Break |1200|EDC-PCR |1340|Inst-LKC|1520|NULL"
-echo "Wed|700|MAth-SA |840|CS-SKR  |1020|Break |1200|EDC-AKR |1340|NULL"
-echo "Thu|700|EM-MM   |840|PS-SS   |1020|Break |1200|EDC-AKR |1340|NULL"
-echo "Fri|700|Math-GBJ|750|Break   |840 |CS-SKR|1020|Break   |1200|Inst-RS |1340|NULL"
-echo "Sat|0  |NULL"
-echo "-END-"
-echo.
-
 set hhmm=%time:~0,5%
 echo %hhmm%
 set day=%date:~0,4%
@@ -88,7 +77,7 @@ start chrome "https://meet.google.com/lookup/###?authuser=1" &goto pau
 echo ControlSystem - SKR.
 start chrome "https://meet.google.com/lookup/###?authuser=1" &goto pau 
 :AKR
-echo Electronic Device and Circuits - PCR.
+echo Electronic Device and Circuits - AKR.
 start chrome "https://meet.google.com/lookup/###?authuser=1" &goto pau 
 :PCR
 echo ElectronicDevice^&Circuits - PCR.
